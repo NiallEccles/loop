@@ -1,4 +1,6 @@
 import '@mantine/core/styles.css';
+import {NextIntlClientProvider} from 'next-intl';
+import {getLocale, getMessages} from 'next-intl/server';
 
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
@@ -9,7 +11,11 @@ export const metadata = {
   description: 'I am using Mantine with Next.js!',
 };
 
-export default function RootLayout({ children }: { children: any }) {
+export default async function RootLayout({ children }: { children: any }) {
+  const locale = await getLocale();
+
+  const messages = await getMessages();
+
   return (
     <html lang="en" suppressHydrationWarning>
     <head>
@@ -20,7 +26,9 @@ export default function RootLayout({ children }: { children: any }) {
       />
     </head>
     <body>
-    <MantineProvider theme={theme}>{children}</MantineProvider>
+    <NextIntlClientProvider messages={messages}>
+      <MantineProvider theme={theme}>{children}</MantineProvider>
+    </NextIntlClientProvider>
     </body>
     </html>
   );
