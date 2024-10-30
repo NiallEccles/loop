@@ -1,0 +1,161 @@
+export const mockData = [{
+    "id": 1,
+    "first_name": "Sidney",
+    "last_name": "skeningham0",
+    "email": "sgrollmann0@goo.gl",
+    "followers": 916,
+    "following": 2968,
+    "join_date": "1725818708000"
+}, {
+    "id": 2,
+    "first_name": "Cammi",
+    "last_name": "cocloney1",
+    "email": "cgilders1@creativecommons.org",
+    "followers": 2614,
+    "following": 232,
+    "join_date": "1726747243000"
+}, {
+    "id": 3,
+    "first_name": "Sheilakathryn",
+    "last_name": "slatham2",
+    "email": "sduffill2@homestead.com",
+    "followers": 1836,
+    "following": 1417,
+    "join_date": "1697588199000"
+}, {
+    "id": 4,
+    "first_name": "Ammamaria",
+    "last_name": "apanas3",
+    "email": "acoltman3@sitemeter.com",
+    "followers": 582,
+    "following": 310,
+    "join_date": "1696593008000"
+}, {
+    "id": 5,
+    "first_name": "Sheelagh",
+    "last_name": "solivetti4",
+    "email": "ssuermeier4@kickstarter.com",
+    "followers": 1627,
+    "following": 2215,
+    "join_date": "1722962360000"
+}, {
+    "id": 6,
+    "first_name": "Sibella",
+    "last_name": "scartmer5",
+    "email": "spollicatt5@cam.ac.uk",
+    "followers": 2307,
+    "following": 1556,
+    "join_date": "1722316323000"
+}, {
+    "id": 7,
+    "first_name": "Cher",
+    "last_name": "cbrunelli6",
+    "email": "cduddin6@themeforest.net",
+    "followers": 2755,
+    "following": 2008,
+    "join_date": "1699621328000"
+}, {
+    "id": 8,
+    "first_name": "Kristoffer",
+    "last_name": "ktassell7",
+    "email": "keasbie7@guardian.co.uk",
+    "followers": 2831,
+    "following": 1620,
+    "join_date": "1715078796000"
+}, {
+    "id": 9,
+    "first_name": "Otes",
+    "last_name": "obyers8",
+    "email": "obremmer8@gravatar.com",
+    "followers": 1483,
+    "following": 2886,
+    "join_date": "1696894637000"
+}, {
+    "id": 10,
+    "first_name": "Hynda",
+    "last_name": "hlaffoleylane9",
+    "email": "hgrisenthwaite9@loc.gov",
+    "followers": 1839,
+    "following": 891,
+    "join_date": "1714459358000"
+}, {
+    "id": 11,
+    "first_name": "Aveline",
+    "last_name": "aturfreya",
+    "email": "ahickena@merriam-webster.com",
+    "followers": 15,
+    "following": 1308,
+    "join_date": "1714849904000"
+}, {
+    "id": 12,
+    "first_name": "Kimbell",
+    "last_name": "kraultb",
+    "email": "kludmanb@github.io",
+    "followers": 2859,
+    "following": 462,
+    "join_date": "1729936391000"
+}, {
+    "id": 13,
+    "first_name": "Odo",
+    "last_name": "oseathwrightc",
+    "email": "omasonc@tamu.edu",
+    "followers": 2977,
+    "following": 642,
+    "join_date": "1701359755000"
+}, {
+    "id": 14,
+    "first_name": "Catie",
+    "last_name": "ccambdend",
+    "email": "cbashamd@china.com.cn",
+    "followers": 347,
+    "following": 550,
+    "join_date": "1699670067000"
+}, {
+    "id": 15,
+    "first_name": "Wakefield",
+    "last_name": "wwestalle",
+    "email": "wblascheke@discuz.net",
+    "followers": 1680,
+    "following": 287,
+    "join_date": "1729105781000"
+}, {
+    "id": 16,
+    "first_name": "Aridatha",
+    "last_name": "acurraof",
+    "email": "agarmonf@pbs.org",
+    "followers": 434,
+    "following": 538,
+    "join_date": "1707025167000"
+}, {
+    "id": 17,
+    "first_name": "Carlene",
+    "last_name": "cpietruszkag",
+    "email": "corsmang@theglobeandmail.com",
+    "followers": 1419,
+    "following": 1142,
+    "join_date": "1726583605000"
+}, {
+    "id": 18,
+    "first_name": "Suki",
+    "last_name": "sfacherh",
+    "email": "srobilarth@eventbrite.com",
+    "followers": 128,
+    "following": 2020,
+    "join_date": "1696304865000"
+}, {
+    "id": 19,
+    "first_name": "Bowie",
+    "last_name": "bshipperbottomi",
+    "email": "bdesaveryi@timesonline.co.uk",
+    "followers": 333,
+    "following": 2183,
+    "join_date": "1724070153000"
+}, {
+    "id": 20,
+    "first_name": "Wake",
+    "last_name": "wperej",
+    "email": "wmazilliusj@about.me",
+    "followers": 1626,
+    "following": 2479,
+    "join_date": "1717628179000"
+}]
