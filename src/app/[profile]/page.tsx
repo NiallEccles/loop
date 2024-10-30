@@ -1,6 +1,8 @@
 import { ColorSchemeToggle } from '../../components/ColorSchemeToggle/ColorSchemeToggle';
 import {useTranslations} from 'next-intl';
 import { Container } from '@mantine/core';
+import {mockData} from '../../mockData';
+import ProfileImage from "@/components/ProfileImage/ProfileImage";
 
 export default function HomePage() {
   const t = useTranslations('ProfilePage');
@@ -8,9 +10,12 @@ export default function HomePage() {
   return (
     <>
       <ColorSchemeToggle />
-      <Container size="sm">
-        <h1>{t('title')}</h1>
-      </Container>
+        <Container size="sm">
+            <h1>{t('title')}</h1>
+            <ProfileImage name={mockData[8].first_name}/>
+            <h2>{mockData[8].first_name}</h2>
+            <h2>{mockData[8].user_name}</h2>
+        </Container>
     </>
   );
 }
