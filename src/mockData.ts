@@ -1,7 +1,7 @@
 export const mockData = [{
     "id": 1,
     "first_name": "Sidney",
-    "last_name": "skeningham0",
+    "user_name": "skeningham0",
     "email": "sgrollmann0@goo.gl",
     "followers": 916,
     "following": 2968,
@@ -9,7 +9,7 @@ export const mockData = [{
 }, {
     "id": 2,
     "first_name": "Cammi",
-    "last_name": "cocloney1",
+    "user_name": "cocloney1",
     "email": "cgilders1@creativecommons.org",
     "followers": 2614,
     "following": 232,
@@ -17,7 +17,7 @@ export const mockData = [{
 }, {
     "id": 3,
     "first_name": "Sheilakathryn",
-    "last_name": "slatham2",
+    "user_name": "slatham2",
     "email": "sduffill2@homestead.com",
     "followers": 1836,
     "following": 1417,
@@ -25,7 +25,7 @@ export const mockData = [{
 }, {
     "id": 4,
     "first_name": "Ammamaria",
-    "last_name": "apanas3",
+    "user_name": "apanas3",
     "email": "acoltman3@sitemeter.com",
     "followers": 582,
     "following": 310,
@@ -33,7 +33,7 @@ export const mockData = [{
 }, {
     "id": 5,
     "first_name": "Sheelagh",
-    "last_name": "solivetti4",
+    "user_name": "solivetti4",
     "email": "ssuermeier4@kickstarter.com",
     "followers": 1627,
     "following": 2215,
@@ -41,7 +41,7 @@ export const mockData = [{
 }, {
     "id": 6,
     "first_name": "Sibella",
-    "last_name": "scartmer5",
+    "user_name": "scartmer5",
     "email": "spollicatt5@cam.ac.uk",
     "followers": 2307,
     "following": 1556,
@@ -49,7 +49,7 @@ export const mockData = [{
 }, {
     "id": 7,
     "first_name": "Cher",
-    "last_name": "cbrunelli6",
+    "user_name": "cbrunelli6",
     "email": "cduddin6@themeforest.net",
     "followers": 2755,
     "following": 2008,
@@ -57,7 +57,7 @@ export const mockData = [{
 }, {
     "id": 8,
     "first_name": "Kristoffer",
-    "last_name": "ktassell7",
+    "user_name": "ktassell7",
     "email": "keasbie7@guardian.co.uk",
     "followers": 2831,
     "following": 1620,
@@ -65,7 +65,7 @@ export const mockData = [{
 }, {
     "id": 9,
     "first_name": "Otes",
-    "last_name": "obyers8",
+    "user_name": "obyers8",
     "email": "obremmer8@gravatar.com",
     "followers": 1483,
     "following": 2886,
@@ -73,7 +73,7 @@ export const mockData = [{
 }, {
     "id": 10,
     "first_name": "Hynda",
-    "last_name": "hlaffoleylane9",
+    "user_name": "hlaffoleylane9",
     "email": "hgrisenthwaite9@loc.gov",
     "followers": 1839,
     "following": 891,
@@ -81,7 +81,7 @@ export const mockData = [{
 }, {
     "id": 11,
     "first_name": "Aveline",
-    "last_name": "aturfreya",
+    "user_name": "aturfreya",
     "email": "ahickena@merriam-webster.com",
     "followers": 15,
     "following": 1308,
@@ -89,7 +89,7 @@ export const mockData = [{
 }, {
     "id": 12,
     "first_name": "Kimbell",
-    "last_name": "kraultb",
+    "user_name": "kraultb",
     "email": "kludmanb@github.io",
     "followers": 2859,
     "following": 462,
@@ -97,7 +97,7 @@ export const mockData = [{
 }, {
     "id": 13,
     "first_name": "Odo",
-    "last_name": "oseathwrightc",
+    "user_name": "oseathwrightc",
     "email": "omasonc@tamu.edu",
     "followers": 2977,
     "following": 642,
@@ -105,7 +105,7 @@ export const mockData = [{
 }, {
     "id": 14,
     "first_name": "Catie",
-    "last_name": "ccambdend",
+    "user_name": "ccambdend",
     "email": "cbashamd@china.com.cn",
     "followers": 347,
     "following": 550,
@@ -113,7 +113,7 @@ export const mockData = [{
 }, {
     "id": 15,
     "first_name": "Wakefield",
-    "last_name": "wwestalle",
+    "user_name": "wwestalle",
     "email": "wblascheke@discuz.net",
     "followers": 1680,
     "following": 287,
@@ -121,7 +121,7 @@ export const mockData = [{
 }, {
     "id": 16,
     "first_name": "Aridatha",
-    "last_name": "acurraof",
+    "user_name": "acurraof",
     "email": "agarmonf@pbs.org",
     "followers": 434,
     "following": 538,
@@ -129,7 +129,7 @@ export const mockData = [{
 }, {
     "id": 17,
     "first_name": "Carlene",
-    "last_name": "cpietruszkag",
+    "user_name": "cpietruszkag",
     "email": "corsmang@theglobeandmail.com",
     "followers": 1419,
     "following": 1142,
@@ -137,7 +137,7 @@ export const mockData = [{
 }, {
     "id": 18,
     "first_name": "Suki",
-    "last_name": "sfacherh",
+    "user_name": "sfacherh",
     "email": "srobilarth@eventbrite.com",
     "followers": 128,
     "following": 2020,
@@ -145,7 +145,7 @@ export const mockData = [{
 }, {
     "id": 19,
     "first_name": "Bowie",
-    "last_name": "bshipperbottomi",
+    "user_name": "bshipperbottomi",
     "email": "bdesaveryi@timesonline.co.uk",
     "followers": 333,
     "following": 2183,
@@ -153,7 +153,7 @@ export const mockData = [{
 }, {
     "id": 20,
     "first_name": "Wake",
-    "last_name": "wperej",
+    "user_name": "wperej",
     "email": "wmazilliusj@about.me",
     "followers": 1626,
     "following": 2479,
