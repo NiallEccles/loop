@@ -1,5 +1,5 @@
-import '@mantine/core/styles.css';
 import "./globals.css";
+import '@mantine/core/styles.css';
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 
