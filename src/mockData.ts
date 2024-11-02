@@ -87,7 +87,36 @@ export const mockData = [
         "followers": 1483,
         "following": 2886,
         "join_date": "1696894637000",
-        "bio": "Aspiring chef 🍳 Cooking up storms in London. Food pics that'll make you hungry"
+        "bio": "Aspiring chef 🍳 Cooking up storms in London. Food pics that'll make you hungry",
+        "posts": [
+            {
+                "text": "🔥 Just spent 6 hours perfecting this wild mushroom risotto and I regret NOTHING! The secret? Homemade mushroom stock with three different types of fungi (thank you Borough Market!) and a splash of truffle oil at the end. Swipe for that money shot of the perfect risotto flow 👨‍🍳✨\n\n#ChefLife #FoodiesOfLondon #Risotto #BoroughMarket #CookingFromHeart #HomemadeFood #ChefInTraining #FoodPorn #CookingJourney",
+                "timestamp": "1697049439000",
+                "location": "London, United Kingdom",
+                "media": [
+                    {
+                        "type": "image",
+                        "description": "Creamy mushroom risotto in a rustic bowl",
+                        "order": 1
+                    },
+                    {
+                        "type": "image",
+                        "description": "Action shot of risotto flowing off wooden spoon",
+                        "order": 2
+                    },
+                    {
+                        "type": "image",
+                        "description": "Process shot of mushroom stock preparation",
+                        "order": 3
+                    }
+                ],
+                "engagement": {
+                    "likes": 246,
+                    "comments": 32,
+                    "shares": 15
+                }
+            }
+        ]
     },
     {
         "id": 10,
