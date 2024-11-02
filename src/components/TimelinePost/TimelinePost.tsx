@@ -43,10 +43,10 @@ export default function TimelinePost() {
         setInitialSlide(index)
     };
     return (
-        <Card padding="lg" withBorder>
+        <Card padding="lg" withBorder my="xs">
             <Flex justify="space-evenly" gap="lg">
                 <Flex>
-                    <Avatar className="outline outline-8 outline-white" style={{ width: '2rem', height: '2rem' }} {...config} />
+                    <Avatar style={{ width: '3rem', height: '3rem' }} {...config} />
                 </Flex>
                 <Flex direction="column">
                     <Flex mb="md">
