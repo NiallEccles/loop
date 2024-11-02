@@ -23,7 +23,12 @@ export default function HomePage() {
                 <ProfileAction />
             </div>
             <div className='mt-5'>
-                <ProfileDescription bio={mockData[8].bio} date={mockData[8].join_date}/>
+                <ProfileDescription
+                    bio={mockData[8].bio}
+                    date={mockData[8].join_date}
+                    followers={mockData[8].followers}
+                    following={mockData[8].following}
+                />
             </div>
         </Container>
     </>
