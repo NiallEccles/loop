@@ -6,6 +6,7 @@ import ProfileImage from "@/components/ProfileImage/ProfileImage";
 import ProfileName from "@/components/ProfileName/ProfileName";
 import ProfileAction from "@/components/ProfileAction/ProfileAction";
 import ProfileDescription from "@/components/ProfileDescription/ProfileDescription";
+import TimelinePost from "@/components/TimelinePost/TimelinePost";
 
 export default function HomePage() {
   const t = useTranslations('ProfilePage');
@@ -30,6 +31,7 @@ export default function HomePage() {
                     following={mockData[8].following}
                 />
             </div>
+            <TimelinePost/>
         </Container>
     </>
   );
