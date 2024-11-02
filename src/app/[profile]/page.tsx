@@ -5,6 +5,7 @@ import {mockData} from '../../mockData';
 import ProfileImage from "@/components/ProfileImage/ProfileImage";
 import ProfileName from "@/components/ProfileName/ProfileName";
 import ProfileAction from "@/components/ProfileAction/ProfileAction";
+import ProfileDescription from "@/components/ProfileDescription/ProfileDescription";
 
 export default function HomePage() {
   const t = useTranslations('ProfilePage');
@@ -21,8 +22,9 @@ export default function HomePage() {
                 </div>
                 <ProfileAction />
             </div>
-            <h2>{mockData[8].first_name}</h2>
-            <h2>{mockData[8].user_name}</h2>
+            <div className='mt-5'>
+                <ProfileDescription bio={mockData[8].bio} date={mockData[8].join_date}/>
+            </div>
         </Container>
     </>
   );
