@@ -5,6 +5,7 @@ import {getLocale, getMessages} from 'next-intl/server';
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../../theme';
+import '@mantine/carousel/styles.css';
 
 export const metadata = {
   title: 'Mantine Next.js template',
