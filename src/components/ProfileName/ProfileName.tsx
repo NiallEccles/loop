@@ -8,10 +8,10 @@ type ProfileNameProps = {
 export default function ProfileName({displayName, userName}:ProfileNameProps) {
     return (
         <div className='flex flex-col justify-end pl-5'>
-            <h3 className='font-bold text-lg text-black dark:text-white'>
+            <h3 className='font-bold text-lg'>
                 {displayName}
             </h3>
-            <h3 className='text-gray-800'>
+            <h3>
                 @{userName}
             </h3>
         </div>
