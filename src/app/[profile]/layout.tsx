@@ -35,8 +35,10 @@ export default async function RootLayout({ children }: { children: any }) {
     <body>
     <NextIntlClientProvider messages={messages}>
         <MantineProvider theme={theme}>
+          <UserProvider>
             <MainNavigation user={user} />
             {children}
+          </UserProvider>
         </MantineProvider>
     </NextIntlClientProvider>
     </body>
