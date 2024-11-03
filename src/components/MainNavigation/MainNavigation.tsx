@@ -5,7 +5,7 @@ type MainNavigationProps = {
     user: Session | null | undefined
 }
 export default async function MainNavigation({user}: MainNavigationProps) {
-    
+    console.log(user);
     return (
         <nav className="p-5">
             <Flex justify="space-between">
