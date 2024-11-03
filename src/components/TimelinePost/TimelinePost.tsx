@@ -44,18 +44,6 @@ export default function TimelinePost() {
 
     const { user } = useUser();
 
-    const supabase = getSupabase(user?.accessToken)
-
-    useEffect(() => {
-        const fetchTodos = async () => {
-            const { data } = await supabase.from('posts').select('*')
-            console.log(data)
-            setPosts(data);
-        }
-
-        fetchTodos()
-    }, [])
-
     const setAndOpenModalWithStartingImage = (index: number) => {
         setOpened(true);
         setInitialSlide(index)
