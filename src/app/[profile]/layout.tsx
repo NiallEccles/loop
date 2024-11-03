@@ -6,6 +6,10 @@ import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../../theme';
 import '@mantine/carousel/styles.css';
+import MainNavigation from "@/components/MainNavigation/MainNavigation";
+// import { getSession } from "@auth0/nextjs-auth0";
+import { UserProvider } from '@auth0/nextjs-auth0/client';
+import { getSession } from "@auth0/nextjs-auth0";
 
 export const metadata = {
   title: 'Mantine Next.js template',
@@ -16,6 +20,8 @@ export default async function RootLayout({ children }: { children: any }) {
   const locale = await getLocale();
 
   const messages = await getMessages();
+
+  const user = await getSession();
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -28,7 +34,10 @@ export default async function RootLayout({ children }: { children: any }) {
     </head>
     <body>
     <NextIntlClientProvider messages={messages}>
-      <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+            <MainNavigation user={user} />
+            {children}
+        </MantineProvider>
     </NextIntlClientProvider>
     </body>
     </html>
