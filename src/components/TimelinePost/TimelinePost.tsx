@@ -48,7 +48,7 @@ export default function TimelinePost() {
                 <Flex>
                     <Avatar style={{ width: '3rem', height: '3rem' }} {...config} />
                 </Flex>
-                <Flex direction="column">
+                <Flex direction="column" mt="sm">
                     <Flex mb="md">
                         <Text mr="xs">
                             {mockData[8].first_name}
