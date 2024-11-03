@@ -3,9 +3,12 @@ import {mockData} from "@/mockData";
 import {Card, Image, Text, Badge, Button, Group, Modal, Grid, Flex, Container, Divider, Space, Box, ActionIcon} from '@mantine/core';
 import {Carousel, Embla} from '@mantine/carousel';
 import { Heart, MessageCircle, Share } from 'lucide-react';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Avatar, {genConfig} from "react-nice-avatar";
 import {useFormatter} from "next-intl";
+import {getSupabase} from "@/utils/supabase";
+import {getSession} from "@auth0/nextjs-auth0";
+import {useUser} from "@auth0/nextjs-auth0/client";
 
 type TimelinePost = {
     text: string;
@@ -28,6 +31,7 @@ export default function TimelinePost() {
     const [opened, setOpened] = useState(false);
     const [embla, setEmbla] = useState<Embla | null>(null);
     const [initialSlide, setInitialSlide] = useState(0);
+    const [posts, setPosts] = useState<any[]>([]);
 
     const config = genConfig(mockData[8].first_name)
 
@@ -37,6 +41,20 @@ export default function TimelinePost() {
         year: 'numeric',
         month: 'short',
     });
+
+    const { user } = useUser();
+
+    const supabase = getSupabase(user?.accessToken)
+
+    useEffect(() => {
+        const fetchTodos = async () => {
+            const { data } = await supabase.from('posts').select('*')
+            console.log(data)
+            setPosts(data);
+        }
+
+        fetchTodos()
+    }, [])
 
     const setAndOpenModalWithStartingImage = (index: number) => {
         setOpened(true);
