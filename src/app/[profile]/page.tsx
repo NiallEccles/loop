@@ -31,9 +31,10 @@ export default function HomePage() {
                     following={mockData[8].following}
                 />
             </div>
-            {
-                new Array(10).fill('').map(() => <TimelinePost/>)
-            }
+            {/*{*/}
+            {/*    new Array(10).fill('').map(() => <TimelinePost/>)*/}
+            {/*}*/}
+            <TimelinePost/>
         </Container>
     </>
   );
