@@ -1,14 +1,13 @@
 'use client';
 import {mockData} from "@/mockData";
-import {Card, Image, Text, Badge, Button, Group, Modal, Grid, Flex, Container, Divider, Space, Box, ActionIcon} from '@mantine/core';
-import {Carousel, Embla} from '@mantine/carousel';
-import { Heart, MessageCircle, Share } from 'lucide-react';
-import {useEffect, useState} from "react";
+import {Card, Text, Flex, Divider } from '@mantine/core';
+import {useState} from "react";
 import Avatar, {genConfig} from "react-nice-avatar";
 import {useFormatter} from "next-intl";
-import {getSupabase} from "@/utils/supabase";
-import {getSession} from "@auth0/nextjs-auth0";
 import {useUser} from "@auth0/nextjs-auth0/client";
+import PostActionBar from "@/components/PostActionBar/PostActionBar";
+import PostCarousel from "@/components/PostCarousel/PostCarousel";
+import PostImageGrid from "@/components/PostImageGrid/PostImageGrid";
 
 type TimelinePost = {
     text: string;
@@ -25,22 +24,21 @@ type TimelinePost = {
         shares: number;
     }
 }
-export default function TimelinePost() {
-    const post = mockData[8].posts[0]!;
+export default function TimelinePost({}:TimelinePost) {
+    const post = mockData[8]!.posts![0];
     const TRANSITION_DURATION = 200;
-    const [opened, setOpened] = useState(false);
-    const [embla, setEmbla] = useState<Embla | null>(null);
-    const [initialSlide, setInitialSlide] = useState(0);
-    const [posts, setPosts] = useState<any[]>([]);
 
     const config = genConfig(mockData[8].first_name)
 
     const format = useFormatter();
 
-    const postDate = format.dateTime(Number(mockData[8].posts[0].timestamp), {
+    const postDate = format.dateTime(Number(post.timestamp), {
         year: 'numeric',
         month: 'short',
     });
+
+    const [opened, setOpened] = useState(false);
+    const [initialSlide, setInitialSlide] = useState(0);
 
     const { user } = useUser();
 
@@ -69,66 +67,22 @@ export default function TimelinePost() {
                     <Text size="md" mb="md">
                         {post.text}
                     </Text>
-                    <Grid grow>
-                        <Grid.Col span={4} onClick={()=>setAndOpenModalWithStartingImage(0)}>
-                            <Image radius="md" width='100%' src="./blob-scene-haikei.png"/>
-                        </Grid.Col>
-                        <Grid.Col span={4} onClick={()=>setAndOpenModalWithStartingImage(1)}>
-                            <Image radius="md" width='100%' src="./stacked-steps-haikei.png"/>
-                        </Grid.Col>
-                        <Grid.Col span={4} onClick={()=>setAndOpenModalWithStartingImage(2)}>
-                            <Image radius="md" width='100%' src="./stacked-waves-haikei.png"/>
-                        </Grid.Col>
-                    </Grid>
-
-
+                    <PostImageGrid
+                        images={
+                            [
+                                "./blob-scene-haikei.png",
+                                "./stacked-steps-haikei.png",
+                                "./stacked-waves-haikei.png"
+                            ]
+                        }
+                        setAndOpenModalWithStartingImage={setAndOpenModalWithStartingImage}
+                    />
                     <Card.Section>
-                        <Modal
-                            opened={opened}
-                            size={'70%'}
-                            padding={0}
-                            withCloseButton={true}
-                            onClose={() => setOpened(false)}
-                            centered
-                        >
-                            <Carousel
-                                initialSlide={initialSlide}
-                            >
-                                <Carousel.Slide>
-                                    <Image width='100%' src="./blob-scene-haikei.png"/>
-                                </Carousel.Slide>
-                                <Carousel.Slide>
-                                    <Image width='100%' src="./stacked-steps-haikei.png"/>
-                                </Carousel.Slide>
-                                <Carousel.Slide>
-                                    <Image width='100%' src="./stacked-waves-haikei.png"/>
-                                </Carousel.Slide>
-                            </Carousel>
-                        </Modal>
+                        <PostCarousel opened={opened} initialSlide={initialSlide} setOpened={setOpened} />
                     </Card.Section>
                     <Card.Section>
                         <Divider mt="md"/>
-                        <Box my="xs">
-                            <Group>
-                                <Container>
-                                    <Button variant="subtle" radius="md">
-                                        <Heart/>
-                                        <h4>3</h4>
-                                    </Button>
-                                </Container>
-                                <Container>
-                                    <Button variant="subtle">
-                                        <MessageCircle/>
-                                        <h3>6</h3>
-                                    </Button>
-                                </Container>
-                                <Container>
-                                    <Button variant="subtle">
-                                        <Share/>
-                                    </Button>
-                                </Container>
-                            </Group>
-                        </Box>
+                        <PostActionBar />
                     </Card.Section>
                 </Flex>
             </Flex>
